@@ -1,14 +1,15 @@
-def calculate_fine(book_title, days_overdue, daily_rate=5.0, max_fine=150.0):
-    fine = days_overdue * daily_rate
-    if fine > max_fine:
-        fine = max_fine
+M = input()
+N = int(input())
 
-    print(f"Book: {book_title}")
-    print(f"Days_overdue: {days_overdue}")
-    print(f"Fine: Rs {fine}")
+def calculate_fine(name, days):
+    fine = days * 5
+    
+    if fine > 150:
+        fine = 150
+        print("You have accumulated the maximum fine of INR: 150.0")
+    
+    print("Book:", name)
+    print("Days overdue:", days)
+    print("Fine: Rs.", float(fine))
 
-data = input() .split()
-book_title = " ".join(data[:-1])
-days_overdue = int(data[-1])
-
-calculate_fine(book_title, days_overdue) 
+calculate_fine(M, N) 
